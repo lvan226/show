@@ -1,0 +1,23 @@
+// Слайдер
+.slick-slider{}
+// Ограничивающая оболочка
+.slick-list {
+  overflow: hidden;
+}
+// Лента слайдов
+.slick-track {
+  display: flex;
+  // align-items: flex-start; // Если нужна адаптивная высота
+}
+// Слайд
+.slick-slide {
+
+}
+// Слайд активный
+.slick-slide.slick-active {
+
+}
+// Слайд основной
+.slick-slide.slick-current {
+
+}
