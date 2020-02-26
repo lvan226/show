@@ -76,9 +76,7 @@
   }
   // .menu__list
   &__list {
-    ul {
-      @media (max-width: $md) {display: none;}
-    }
+ 
   }
   // .menu__list-item
   &__list-item {
@@ -123,7 +121,76 @@
       }
   }
 
-  
+.menu__list {
+  .menu__list-wrap {
+    @media (max-width: $md) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      transform: translateX(-120%);
+      transition: ease-in .4s;
+      background-color: $blue;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  ul {
+    @media (max-width: $md) {
+      z-index: 25;
+
+    }
+  }
+  &-item {
+    @media (max-width: $md) {
+      display: block;
+      & + & {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+  .menu__list-close {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transform: scale(0);
+    transition: .4s;
+    transition-delay: .5s;
+    @media (min-width: 992px) {
+      display: none !important;
+    }
+  }
+}
+.menu__list.active {
+  .menu__list-wrap {
+    transform: translateX(0%);
+  }
+  .menu__list-close {
+    transform: scale(1);
+  }
+}
+body.fixed-menu {
+  .menu {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    z-index: 20;
+    &__inner {
+      padding: 25px 0;
+      @media (max-width: $sm) {
+        padding: 15px 0;
+      }
+    }
+  }
+}
   
   
 // </МЕНЮ> =====================================================================================================
@@ -401,7 +468,356 @@
   
 // </О НАС> =====================================================================================================
 
+// <АФИША> =====================================================================================================
+.poster {
+  @include psect;
+  background-color: $blue;
+  @media (max-width: $sm) {padding-bottom: 75px;}
+  // .poster__slider
+  &__slider {
+   
+  }
+  // .poster__item
+  &__item {
+    height: 530px;
+    margin: 0 20px; 
+    @media (max-width: $md) {margin: 0 10px;height: 430px;}
+    @media (max-width: $sm) {margin: 0 5px;height: 330px;}
+    @media (max-width: $xs) {margin: 0;height: auto;min-height: 180px;padding-bottom: 6%;}
+    position: relative;
+    z-index: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(#000, .2);
+    }
+  }
+  // .poster__item-img
+  &__item-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    @media (max-width: $xs) {position: absolute;top: 0;left: 0;}
+  }
+  }
+  .container {
+  }
+  .slider-slick {
+  }
+  .icon-hover {
+  }
+  .gallery {
+  // .gallery__item-icon
+  &__item-icon {}
+  }
+  .icon-search-plus {
+  }
+  
+// </АФИША> =====================================================================================================
 
+// <ПАРТНЕРЫ> =====================================================================================================
+.partners {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #E3E3E3;
+  // .partners__title
+  &__title {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 35px;
+    @media (max-width: $xs){margin-bottom: 10px;}
+  }
+  // .partners__inner
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $xs){flex-wrap: wrap;justify-content: space-around;}
+  }
+  // .partners__item
+  &__item {
+    @media (max-width: $xs){width: 45%;margin-top: 20px;text-align: center;}
+    img {
+      @media (max-width: $xs) {max-height: 80%;}
+    }
+    &+ .partners__item {
+      margin-left: 90px;
+      @media (max-width: $sm){ margin-left: 50px;}
+      @media (max-width: $xs){ margin-left: 0px;}
+    }
+  }
+  }
+  .container {
+  }
+  
+// </ПАРТНЕРЫ> =====================================================================================================
+
+// <СЕКЦИЯ НАД КАРТОЙ> =====================================================================================================
+.abovemap {
+  @include psect;
+  @media (max-width: $xs) {padding-bottom: 30px;}
+  // .abovemap__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md) {flex-wrap: wrap;}
+  }
+  // .abovemap__info
+  &__info {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $lg) {max-width: 350px;}
+    @media (max-width: $md) {max-width: 100%;margin-bottom: 30px;}
+  }
+  // .abovemap__info-image
+  &__info-image {
+    @media (max-width: $md) {margin-bottom: 20px;}
+    img {
+      @media (max-width: $md) {margin: 0 auto;display: block;}
+    }
+  }
+  // .abovemap__info-social
+  &__info-social {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    @media (max-width: $lg) {margin-bottom: 0;}
+    a {
+      @media (max-width: $xs) {width: 45px;}
+    }
+    a + a {
+      margin-left: 40px;
+    }
+  }
+  // .abovemap__text
+  &__text {
+    max-width: 700px;
+    font-size: 21px;
+    @media (max-width: $lg) {max-width: 550px;font-size: 18px;}
+    @media (max-width: $md) {max-width: 100%;}
+    p  {
+      margin-bottom: 20px;
+      @media (max-width: $lg) {margin-bottom: 15px;}
+    }
+    h4 {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+  }
+  .container {
+  }
+// </СЕКЦИЯ НАД КАРТОЙ> =====================================================================================================
+
+// <КАРТА> =====================================================================================================
+.map {
+  padding-bottom: 100px;
+  @media (max-width: $sm){padding-bottom: 50px;}
+  // .map__inner
+  &__inner {
+    iframe {
+      width: 99%;
+      height: 560px;
+      @media (max-width: $lg) {height: 400px;}
+      @media (max-width: $md) {height: 300px;}
+      @media (max-width: $xs) {height: 240px;}
+    }
+  }
+  }
+  .container {
+  }
+// </КАРТА> =====================================================================================================
+
+// <ПОДВАЛ> =====================================================================================================
+.footer {
+  @include psect;
+  background-color: #3E3E3E;
+  color: #fff;
+  font-size: 14px;
+  // .footer__inner
+  &__inner {
+    display: flex;
+    margin-bottom: 60px;
+    @media (max-width: $xs) {flex-wrap: wrap;margin-bottom: 10px;}
+  }
+  // .footer__col
+  &__col {
+    @media (max-width: $xs) {width: 48%;margin-bottom: 20px;}
+    @media (max-width: 450px) {width: 100%;}
+    & + & {
+      margin-left: 160px;
+      @media (max-width: $md) {margin-left: 80px;}
+      @media (max-width: $sm) {margin-left: 40px;}
+      @media (max-width: $xs) {margin-left: 0px;}
+    }
+  }
+  // .footer__col-title
+  &__col-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    @media (max-width: $xs) {margin-bottom: 5px;}
+  }
+  // .footer__col-email
+  &__col-email {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #46D3FF;
+    position: relative;
+    transition: .3s;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #46D3FF;
+    }
+  }
+  // .footer__col-phone
+  &__col-phone {
+    display: block;
+  }
+  // .footer__copy
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $xs) {flex-wrap: wrap;}
+  }
+  // .footer__copy-text
+  &__copy-text {
+    @media (max-width: $xs) {width: 100%;margin-bottom: 10px;}
+  }
+  // .footer__copy-link
+  &__copy-link {}
+  }
+  .container {
+  }
+  .footer .header__link>.link__text:after {
+    border-top: 2px solid #fff;
+  }
+  
+// </ПОДВАЛ> =====================================================================================================
+
+// <Всплавающее окно карьера> =====================================================================================================
+.career {
+  position: fixed;
+  max-width: 660px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  z-index: 21;
+  transition: .5s;
+  transition-delay: .4s;
+  opacity: 0;
+  overflow-x: hidden;
+  &.active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  @media (max-width: $sm) {width: 95%;}
+  @media (max-height: 650px)  {max-height: 450px;overflow-y: scroll;}
+  @media (max-width: 660px)  {max-height: 450px;overflow-y: scroll;}
+  // .career__inner
+  &__inner {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1400px) {padding: 30px;}
+  }
+  // .career__img
+  &__img {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+    @media (max-width: 1400px) {width: 300px;height: 300px;}
+    @media (max-width: $lg) {margin-bottom: 20px;}
+    @media (max-width: $md) {height: 250px;width: 250px;margin-bottom: 10px;}
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .career__info
+  &__info {
+    font-size: 21px;
+  }
+  // .career__title
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 10px;
+    @media (max-width: $lg) {font-size: 36px;}
+    @media (max-width: $md) {font-size: 30px;}
+    @media (max-width: $sm) {font-size: 24px;}
+  }
+  // .career__text
+  &__text {
+    margin-bottom: 20px;
+    @media (max-width: $md) {margin-bottom: 10px;}
+    @media (max-width: $sm) {font-size: 18px;}
+  }
+  // .career__link
+  &__link {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    @media (max-width: $md) {margin-bottom: 10px;}
+  }
+  &__link-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  // .career__social
+  &__social {
+    display: flex;
+    img {
+      display: block;
+    }
+    a {
+      @media (max-width: $xs) {width: 45px;}
+    }
+    a + a {
+      margin-left: 35px;
+      @media (max-width: $md) {margin-left: 25px;}
+    }
+  }
+}
+.career {
+  .career__close {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transform: scale(0);
+    transition: .4s;
+    transition-delay: .9s;
+    // @media (min-width: 992px) {
+    //   display: none !important;
+    // }
+  }
+  &.active {
+    .career__close {
+      transform: scale(1);
+    }
+  }
+}
+
+// </Всплавающее окно карьера> =====================================================================================================
 
 .header__link {
   position: relative;

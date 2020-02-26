@@ -38,12 +38,16 @@
 				</a>
 				<!-- /.menu__logo -->
 				<div class="menu__list">
-					<ul>
-						<li class="menu__list-item header__link"><a class="link__text" href="#">Language</a></li>
-						<li class="menu__list-item header__link"><a class="link__text" href="#">Gallery</a></li>
-						<li class="menu__list-item header__link"><a class="link__text" href="#">Careers</a></li>
-						<li class="menu__list-item header__link"><a class="link__text" href="#">About</a></li>
-					</ul>
+					<div class="menu__list-wrap">
+						<div class="menu__list-close icon-close">
+						</div>
+						<ul>
+							<li class="menu__list-item header__link"><a class="link__text" href="#">Language</a></li>
+							<li class="menu__list-item header__link"><a class="link__text" href="#gallery">Gallery</a></li>
+							<li class="menu__list-item header__link"><a class="link__text popup-btn" href="career">Careers</a></li>
+							<li class="menu__list-item header__link"><a class="link__text" href="#about">About</a></li>
+						</ul>
+					</div>
 					<div class="menu-burger">
 						<span></span>
 						<span></span>
@@ -89,32 +93,42 @@
 
 
 	<!-- <ГАЛЕРЕЯ> -->
-	<div class="gallery">
+	<div class="gallery" id="gallery">
 		<div class="container">
 			<div class="gallery__inner">
 				<div class="gallery__slider slider-slick">
 					<div class="gallery__item icon-hover">
-						<img class="gallery__item-img" src="images/dest/gallery/1.jpg" alt="">
+						<img class="gallery__item-img" data-lazy="images/dest/gallery/1.jpg"
+							src="data:image/gif;base64,R0lGODlhPwAZAIAAAP///wAAACH5BAEAAAEALAAAAAA/ABkAAAImjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6fhYAOw=="
+							alt="">
 						<div class="gallery__item-icon icon-search-plus"></div>
 					</div>
 					<!-- /.gallery__item -->
 					<div class="gallery__item icon-hover">
-						<img class="gallery__item-img" src="images/dest/gallery/2.jpg" alt="">
+						<img class="gallery__item-img" data-lazy="images/dest/gallery/2.jpg"
+							src="data:image/gif;base64,R0lGODlhPwAZAIAAAP///wAAACH5BAEAAAEALAAAAAA/ABkAAAImjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6fhYAOw=="
+							alt="">
 						<div class="gallery__item-icon icon-search-plus"></div>
 					</div>
 					<!-- /.gallery__item -->
 					<div class="gallery__item icon-hover">
-						<img class="gallery__item-img" src="images/dest/gallery/3.jpg" alt="">
+						<img class="gallery__item-img" data-lazy="images/dest/gallery/3.jpg"
+							src="data:image/gif;base64,R0lGODlhPwAZAIAAAP///wAAACH5BAEAAAEALAAAAAA/ABkAAAImjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6fhYAOw=="
+							alt="">
 						<div class="gallery__item-icon icon-search-plus"></div>
 					</div>
 					<!-- /.gallery__item -->
 					<div class="gallery__item icon-hover">
-						<img class="gallery__item-img" src="images/dest/gallery/4.jpg" alt="">
+						<img class="gallery__item-img" data-lazy="images/dest/gallery/4.jpg"
+							src="data:image/gif;base64,R0lGODlhPwAZAIAAAP///wAAACH5BAEAAAEALAAAAAA/ABkAAAImjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6fhYAOw=="
+							alt="">
 						<div class="gallery__item-icon icon-search-plus"></div>
 					</div>
 					<!-- /.gallery__item -->
 					<div class="gallery__item icon-hover">
-						<img class="gallery__item-img" src="images/dest/gallery/5.jpg" alt="">
+						<img class="gallery__item-img" data-lazy="images/dest/gallery/5.jpg"
+							src="data:image/gif;base64,R0lGODlhPwAZAIAAAP///wAAACH5BAEAAAEALAAAAAA/ABkAAAImjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6fhYAOw=="
+							alt="">
 						<div class="gallery__item-icon icon-search-plus"></div>
 					</div>
 					<!-- /.gallery__item -->
@@ -129,7 +143,7 @@
 	<!-- </ГАЛЕРЕЯ> -->
 
 	<!-- <О НАС> -->
-	<div class="about">
+	<div class="about" id="about">
 		<div class="container">
 			<div class="about__inner">
 				<div class="about__row about-row">
@@ -197,6 +211,195 @@
 	<!-- /.about -->
 	<!-- </О НАС> -->
 
+
+	<!-- <АФИША> -->
+	<div class="poster">
+		<div class="container">
+			<div class="poster__slider poster-slider slider-slick">
+				<div class="poster__item icon-hover">
+					<img class="poster__item-img" data-lazy="images/dest/gallery/5.jpg"
+						src="data:image/gif;base64,R0lGODlhJgA1AIAAAP///wAAACH5BAEAAAEALAAAAAAmADUAAAIsjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKgwUAOw=="
+						alt="">
+					<div class="gallery__item-icon icon-search-plus"></div>
+				</div>
+				<!-- /.poster__item -->
+				<div class="poster__item icon-hover">
+					<img class="poster__item-img" data-lazy="images/dest/gallery/4.jpg"
+						src="data:image/gif;base64,R0lGODlhJgA1AIAAAP///wAAACH5BAEAAAEALAAAAAAmADUAAAIsjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKgwUAOw=="
+						alt="">
+					<div class="gallery__item-icon icon-search-plus"></div>
+				</div>
+				<!-- /.poster__item -->
+				<div class="poster__item icon-hover">
+					<img class="poster__item-img" data-lazy="images/dest/gallery/3.jpg"
+						src="data:image/gif;base64,R0lGODlhJgA1AIAAAP///wAAACH5BAEAAAEALAAAAAAmADUAAAIsjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKgwUAOw=="
+						alt="">
+					<div class="gallery__item-icon icon-search-plus"></div>
+				</div>
+				<!-- /.poster__item -->
+				<div class="poster__item icon-hover">
+					<img class="poster__item-img" data-lazy="images/dest/gallery/2.jpg"
+						src="data:image/gif;base64,R0lGODlhJgA1AIAAAP///wAAACH5BAEAAAEALAAAAAAmADUAAAIsjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKgwUAOw=="
+						alt="">
+					<div class="gallery__item-icon icon-search-plus"></div>
+				</div>
+				<!-- /.poster__item -->
+				<div class="poster__item icon-hover">
+					<img class="poster__item-img" data-lazy="images/dest/gallery/1.jpg"
+						src="data:image/gif;base64,R0lGODlhJgA1AIAAAP///wAAACH5BAEAAAEALAAAAAAmADUAAAIsjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKgwUAOw=="
+						alt="">
+					<div class="gallery__item-icon icon-search-plus"></div>
+				</div>
+				<!-- /.poster__item -->
+			</div>
+			<!-- /.poster__slider slider-slick -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.poster -->
+
+	<!-- </АФИША> -->
+
+	<!-- <ПАРТНЕРЫ> -->
+	<div class="partners">
+		<div class="container">
+			<div class="partners__title">Our Partners</div>
+			<div class="partners__inner">
+				<div class="partners__item">
+					<a href="http://guskaras.ru/"><img src="images/dest/partner1.png" alt=""></a>
+				</div>
+				<!-- /.partners__item -->
+				<div class="partners__item">
+					<a href="http://game-forest.com/"><img src="images/dest/partner2.png" alt=""></a>
+				</div>
+				<!-- /.partners__item -->
+				<div class="partners__item">
+					<a href="https://black-rabbit.bar/"><img src="images/dest/partner3.png" alt=""></a>
+				</div>
+				<!-- /.partners__item -->
+			</div>
+			<!-- /.partners__inner -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.partners -->
+	<!-- </ПАРТНЕРЫ> -->
+
+	<!-- <СЕКЦИЯ НАД КАРТОЙ> -->
+	<div class="abovemap">
+		<div class="container">
+			<div class="abovemap__inner">
+				<div class="abovemap__info">
+					<div class="abovemap__info-image">
+						<img src="images/dest/above-img.jpg" alt="">
+					</div>
+					<div class="abovemap__info-social">
+						<a href="#"><img src="images/dest/vk.png" alt=""></a>
+						<a href="#"><img src="images/dest/telegram.png" alt=""></a>
+						<a href="#"><img src="images/dest/facebook.png" alt=""></a>
+					</div>
+				</div>
+				<!-- /.abovemap__info -->
+				<div class="abovemap__text">
+					<h4>Location</h4>
+					<p>Underground Theatre</p>
+					<h4>Car Directions</h4>
+					<p>The best way is to get a taxi and ask the driver to deliver you to the Underground Theatre at VGUES (It’s a
+						short russian name for Vladivostok State University of Economics and Service).
+						You can visit the theatre by your car, but you have to have enough time to find a parking lot.</p>
+					<h4>Walking Directions</h4>
+					<p> Find VGUES (It’s a short russian name for Vladivostok State University of Economics and Service / VSUES)
+						on
+						the map and go to the building. If the road behind you and you faced to the main entrance of the building,
+						walk to the left entrance with big “Underground” sign. Enter the left entrance and it’s straight on the
+						first
+						floor.</p>
+				</div>
+				<!-- /.abovemap__text -->
+			</div>
+			<!-- /.abovemap__inner -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.abovemap -->
+	<!-- </СЕКЦИЯ НАД КАРТОЙ> -->
+
+	<!-- <КАРТА> -->
+	<div class="map">
+		<div class="container">
+			<div class="map__inner">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018527288066!2d30.321953058384334!3d59.93871783905771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1582542819926!5m2!1sru!2sru"
+					frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			</div>
+			<!-- /.map__inner -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.map -->
+	<!-- </КАРТА> -->
+
+
+	<!-- <ПОДВАЛ САЙТА> -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__col">
+					<div class="footer__col-title">Customer Service</div>
+					<a href="info@showikra.com" class="footer__col-email">info@showikra.com</a>
+					<a href="+74232768876" class="footer__col-phone">+7 (423) 276-88-76</a>
+				</div>
+				<!-- /.footer__col -->
+				<div class="footer__col">
+					<div class="footer__col-title">Careers</div>
+					<a href="#" class="footer__col-email">job@showikra.com</a>
+					<a href="#" class="footer__col-phone">+7 (902) 506-76-98</a>
+				</div>
+				<!-- /.footer__col -->
+				<div class="footer__col">
+					<div class="footer__col-title">Partnership</div>
+					<a href="#" class="footer__col-email">promo@showikra.com</a>
+					<a href="#" class="footer__col-phone">+7 (994) 010-33-18</a>
+				</div>
+				<!-- /.footer__col -->
+			</div>
+			<!-- /.footer__inner -->
+			<div class="footer__copy">
+				<div class="footer__copy-text">Copyright © 2020 Showikra. All rights reserved</div>
+				<a href="https://sideguide.ru/" class="footer__copy-link header__link"><span class="link__text">Разработано в
+						Sideguide</span></a>
+			</div>
+			<!-- /.footer__copy -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- </ПОДВАЛ САЙТА> -->
+
+	<!-- <Всплавающее окно карьера> -->
+	<div class="career popup-window" id="career">
+		<div class="career__close icon-close popup-close"></div>
+		<div class="career__inner">
+			<div class="career__img">
+				<img src="images/dest/gallery/1.jpg" alt="">
+			</div>
+			<div class="career__info">
+				<div class="career__title">Job Opportunities</div>
+				<p class="career__text">If you have unique abilities that can win over a discerning audience-we are waiting for You! Tell us about yourself and we will think about how to make your dreams come true!</p>
+			</div>
+			<div class="career__link-wrap">
+				<a href="mailto:job@showikra.com" class="career__link">job@showikra.com</a>
+				<a href="+79025067698" class="career__link">+7 (902) 506-76-98</a>
+			</div>
+			<div class="career__social">
+				<a href="#"><img src="images/dest/vk.png" alt=""></a>
+				<a href="#"><img src="images/dest/telegram.png" alt=""></a>
+				<a href="#"><img src="images/dest/facebook.png" alt=""></a>
+			</div>
+		</div>
+		<!-- /.career__inner -->
+	</div>
+	<!-- /.career -->
+	<!-- </Всплавающее окно карьера> -->
 
 	<script src="js/app.min.js"></script>
 
